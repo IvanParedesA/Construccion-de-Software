@@ -26,4 +26,36 @@ console.log(i);
 for (let j = 1; j <= 10; j++) {
 
 }
-console.log(j);
+
+//console.log(j);
+
+// alert, prompt, confirm
+alert ("Hola");
+
+let nombre = prompt("¿Cómo te llamas");
+console.log(nombre);
+
+let is_hungry = confirm("¿Tienes hambre?");
+console.log(is_hungry);
+
+
+
+// funciones tradicionales
+function numero_alitas() {
+    return 12;
+}
+
+console.log(numero_alitas());
+
+//arrow function
+let cantidad_alitas = () => { return 12 };
+console.log(cantidad_alitas());
+
+let boton = document.getElementById("contador_clicks");
+boton.innerHTML = "Cuenta clicks!";
+boton.onclick = () => {
+    let contador_clicks = Number(document.getElementById("clicks").innerHTML);
+    contador_clicks++;
+    console.log(contador_clicks);
+    document.getElementById("clicks").innerHTML = contador_clicks;
+}
