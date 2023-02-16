@@ -1,5 +1,4 @@
 // variables, constantes, consola (log, info, warn, error, assert)
-// Alcance de las variables
 var desayuno = "hot cakes";
 
 let comida = "alitas";
@@ -17,3 +16,14 @@ console.assert(1 === "1");
 console.assert(1 == "1");
 console.assert(1 == true);
 console.assert(1 === true);
+
+// Alcance de las variables}
+for (var i = 1; i <= 10; i++) {
+
+}
+console.log(i);
+
+for (let j = 1; j <= 10; j++) {
+
+}
+console.log(j);
