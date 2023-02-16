@@ -1,0 +1,19 @@
+// variables, constantes, consola (log, info, warn, error, assert)
+// Alcance de las variables
+var desayuno = "hot cakes";
+
+let comida = "alitas";
+
+const precio = 120;
+
+console.log("Hola");
+console.info("No hay descuentos, el precio es: " + precio);
+console.warn("No le vayas a cambiar el precio");
+console.error("Que no le vayas a cambiar el precio");
+
+console.assert(1 === 1);
+console.assert(1 == 1);
+console.assert(1 === "1");
+console.assert(1 == "1");
+console.assert(1 == true);
+console.assert(1 === true);
