@@ -16,9 +16,9 @@
     <!--Imagen-->
     <img src="Foto de perfil pequeña.jpg" alt="Foto de Perfil" width="200px">
 
+    <!--Tabla-->
     <h3>Tabla con información de Contacto:</h3>
 
-    <!--Tabla-->
     <table>
         <!--Encabezado de la tabla-->
         <thead>
@@ -40,9 +40,9 @@
         <tfoot></tfoot>
     </table>
 
+    <!--Formas o formularios-->
     <h3>Formas:</h3>
 
-    <!--Formas o formularios-->
     <form>
         <!--Texto-->
         <label for="nombre">Ingresa tu nombre:</label>
@@ -87,6 +87,93 @@
         <br><br>
     </form>
 
+    <!--Listas desordenadas (contiene preguntas y respuestas)-->
+    <h3>Lista de preguntas:</h3>
+
+    <p>(Las siguientes preguntas fueron respondidas con ayuda de articulos en internet, las referencias se encuentran
+        en la parte inferior de la página)</p>
+
+    <ul>
+        <li>¿Cuál es la diferencia entre Internet y la World Wide Web?</li>
+        <p>La diferencia es que Internet es el nombre que recibe la conexión que hay entre todas las computadoras
+            alrededor del mundo, mientras que la World Wide Web es la colección de páginas que existe en esa red de 
+            computadoras.</p>
+
+        <li>¿Cuáles son las partes de un URL?</li>
+        <p>El URL está dividido por diferentes partes, cada una con su función específica. 
+            De acuerdo con Edix (2022), las partes de un URL son las siguientes:</p>
+            <!--Lista dentro de otra lista-->
+            <ul>
+                <li>Esquema: es el protocolo de inicio empleado para la transmisión de datos entre ordenadores y la 
+                    recuperación de la información de internet. En la mayor parte de los casos el esquema se 
+                    corresponde con: http o https.</li>
+                <li>Host: normalmente, para el protocolo http, el host es: www.</li>
+                <li>Dominio: corresponde con el nombre del dominio de cada sitio web, como: edix.com.</li>
+                <li>Puerto: define el nombre del puerto según el host. Para el protocolo http, el puerto por 
+                    defecto es 80, pero esta parte suele omitirse.</li>
+                <li>Directorio (o ruta): define el camino que se debe seguir en el servidor. Por ejemplo: blog.</li>
+                <li>Nombre de archivo: define más detalladamente las características del documento: videos-gratis</li>
+            </ul>
+        <br>
+        
+        <li>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</li>
+        <p>Cuando nos referimos a los métodos, estamos hablando de un formato de comunicación entre el cliente y el
+            servidor web. De acuerdo con Williams Morales (2021), este es el propósito de cada uno de estos métodos:</p>
+            <!--Lista dentro de otra lista-->
+            <ul>
+                <li>GET: Realiza una petición a un recurso específico y no permite el envío de datos a excepción si 
+                    dichos datos se envían como parámetro en la Url que realiza la petición. Esta petición retorna 
+                    tanto la cabecera como el contenido. puede retornar una respuesta en formato HTML, JSON, XML, 
+                    Imágenes o JavaScript.</li>
+                <li>HEAD: Es parecido al método GET, con la diferencia de que este no retorna ningún contenido 
+                    HTTP Response. Se utiliza normalmente cuando solo se está interesado en el código de HTTP de 
+                    Respuesta y el encabezado (Headers). Cuando se tiene un sitio web con varios enlaces web y se 
+                    requiere verificar si hay “enlaces rotos”; entonces se realiza la petición a todos los enlaces 
+                    correspondientes y verifica el estado de dichos enlaces.</li>
+                <li>POST: Permite enviar datos al servidor por medio del cuerpo (body) y nada por la Url como se 
+                    emplea en el método GET. El tipo de cuerpo de solicitud se define en la cabecera Content-Type. 
+                    Semánticamente se utiliza para registrar información, similar al INSERT de datos a nivel de base 
+                    de datos. A pesar de eso, se puede forzar este método de petición HTTP para otras acciones como 
+                    actualización, eliminación de registro, como carga de archivos, etc.</li>
+                <li>PUT: Es similar al método de petición POST, solo que el método PUT es idempotente; es decir puede 
+                    ser ejecutado varias veces y tiene el mismo efecto. Semánticamente, se utiliza para la actualización 
+                    de información existente, es semejante a un UPDATE de datos a nivel de base de datos. Los requests 
+                    de un PUT usualmente se envían los datos por formularios, formato JSON entre otros.</li>
+                <li>PATCH: Este método se emplea para modificaciones parciales de un recurso en particular. Se debe 
+                    revisar si el servidor es compatible. Para averiguar si el servidor aceptar peticiones PATCH 
+                    notifica su compatibilidad en el header Allow o Access-Control-Allow-Methods, otra indicación 
+                    de que estas peticiones están permitidas son el header Accept-Patch. Semánticamente, realiza 
+                    una especie de UPDATE a nivel de base de datos.</li>
+                <li>DELETE: Este método de petición permite eliminar un recurso específico. También es idempotente; 
+                    es decir puede ser ejecutado varias veces y tiene el mismo efecto similar al PUT y GET. 
+                    Semánticamente se utiliza para eliminar de información existente</li>
+            </ul>
+        <br>
+
+        <li>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario 
+            y contraseña en algún sitio? ¿Por qué?</li>
+        <p>Se debe usar el método POST, pues este es el que ofrece más discreción. De acuerdo con IONOS (2020), con
+            este método los datos no se muestran en el caché ni tampoco en el historial de navegación. La flexibilidad 
+            del método POST también resulta muy útil: no solo se pueden enviar textos cortos, sino también otros tipos 
+            de información, como fotos o vídeos. </p>
+        
+        <li>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un 
+            URL?</li>
+        
+    </ul>
+
+    <!--Referencias-->
+    <h3>Referencias:</h3>
+
+    <p>BBC News Mundo. (2019, 12 marzo). ¿Cuál es la diferencia entre internet y la web? 
+        (y por qué muchos las confunden). https://www.bbc.com/mundo/noticias-47538812</p>
+    <p>Edix, R. (2022, 11 julio). ¿Qué es una URL? Aquí te lo contamos. Edix España. 
+        https://www.edix.com/es/instituto/que-es-url/</p>
+    <p>Morales, W. (2021, 1 junio). Métodos HTTP - POST, GET, PUT, DELETE. Estilo Web. 
+        http://estilow3b.com/metodos-http-post-get-put-delete/</p>
+    <p>GET vs. POST: los dos métodos de petición HTTP más conocidos cara a cara. (2020, 11 agosto). 
+        IONOS Digital Guide. https://www.ionos.mx/digitalguide/paginas-web/desarrollo-web/get-vs-post/</p>
+
     <!--Pie de página-->
     <footer>
         <p>
@@ -95,7 +182,6 @@
             <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
         </p>
     </footer>
-
 </body>
 
 </html>
