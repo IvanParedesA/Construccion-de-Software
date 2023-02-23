@@ -7,9 +7,11 @@ filesystem.writeFileSync('hola.txt', 'Hola desde node');
 
 const arreglo = [5000, 60, 90, 100, 10, 20, 10000, 0, 120, 2000, 340, 1000, 50];
 
-//El arreglo se ordena de mayor a menor por la cantidad de tiempo
+//Imprimir de manera asíncrona los elementos del arreglo (se imprimen en orden por su valor)
 for (let item of arreglo){
     setTimeout(() => {
         console.log(item);
     }, item);
 }
+
+setTimeout(() => console.log("ya te hackié"), 15000);
