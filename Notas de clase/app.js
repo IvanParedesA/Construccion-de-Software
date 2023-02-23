@@ -15,3 +15,16 @@ for (let item of arreglo){
 }
 
 setTimeout(() => console.log("ya te hackié"), 15000);
+
+//http es un módulo que permite crear servidores web y manejar las peticiones y respuestas
+const http = require('http');
+
+const server = http.createServer( (request, response) => {
+    console.log(request.url);
+    response.setHeader('Content-Type', 'text/html');
+    response.write("<h1>Hot cakes</h1>");
+    response.write("hola desde Node!");
+    response.end();
+});
+
+server.listen(3000);
