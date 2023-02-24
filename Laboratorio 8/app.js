@@ -40,3 +40,15 @@ function calcular_IMC(peso, altura){
 }
 
 console.log(calcular_IMC(peso1, altura1))
+
+//Sigue la demostración del profesor en la sesión de clase sobre los ejemplos básicos para crear un servidor 
+//web que se ejecute sobre node, reciba peticiones de un cliente, y le responda.
+
+//Crea una pequeña aplicación web que al enviar una petición al servidor, devuelva una de las páginas que 
+//creaste anteriormente en tus laboratorios.
+
+const http = require('http');
+
+const server = http.createserver( (request, response){
+    console.log(request.url)
+});
