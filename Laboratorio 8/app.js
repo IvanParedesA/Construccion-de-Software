@@ -30,6 +30,8 @@ saludo(string1);
 
 //Escoge algún problema que hayas implementado en otro lenguaje de programación, y dale una solución en 
 //js que se ejecute sobre node. 
+const peso1 = 73;
+const altura1 = 1.73
 
 function calcular_IMC(peso, altura){
     let IMC = 0;
@@ -37,4 +39,4 @@ function calcular_IMC(peso, altura){
     return IMC;
 }
 
-console.log(calcular_IMC(73, 1.73))
+console.log(calcular_IMC(peso1, altura1))
