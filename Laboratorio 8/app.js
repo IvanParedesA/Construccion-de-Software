@@ -49,6 +49,6 @@ console.log(calcular_IMC(peso1, altura1))
 
 const http = require('http');
 
-const server = http.createserver( (request, response){
+const server = http.createserver( (request, response)=>{
     console.log(request.url)
 });
