@@ -45,3 +45,17 @@ nav ul li{
     /*Los elementos de abajo se quedan en su sitio*/
     clear:both;
 }
+
+#content{
+    float: left;
+    width: 80%;
+    min-height:500px;
+    background: rgb(169, 197, 169);
+}
+
+aside{
+    float: left;
+    width: 20%;
+    min-height:500px;
+    background: rgb(104, 182, 138);
+}
