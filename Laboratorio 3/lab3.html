@@ -48,6 +48,7 @@
 
         </nav>
 
+        <!--Contenido de la página-->
         <section id="content">
 
             <article class="article">
@@ -61,11 +62,6 @@
             </article>
 
             <article class="article">
-                <h2>Formas en HTML</h2>
-                <p>Texto de las formas</p>
-            </article>
-
-            <article class="article">
                 <h2>Preguntas Laboratorio 1</h2>
                 <p>Texto de las preguntas lab 1</p>
             </article>
@@ -76,6 +72,65 @@
             </article>
 
         </section>
+
+        <!--Barra lateral-->
+        <aside>
+
+            <h2>Formas HTML</h2>
+            <form>
+                <!--Texto-->
+                <label for="nombre">Ingresa tu nombre:</label>
+                <input type="text" placeholder="Escribe tu nombre" name="nombre" id="nombre">
+                <br><br>
+                <label for="matricula">Ingresa tu matrícula:</label>
+                <input type="text" placeholder="Escribe tu matrícula" name="matricula" id="matricula">
+                <br><br>
+        
+                <!--Email-->
+                <label for="correo">Ingresa tu correo:</label>
+                <input type="email" placeholder="nombre@dominio.com" name="correo" id="correo">
+                <br><br>
+        
+                <!--Color-->
+                <label for="color">Elige un color:</label>
+                <input type="color" name="color" id="color">
+                <br><br>
+        
+                <!--Fecha-->
+                <label for="fecha">Selecciona una fecha:</label>
+                <input type="date" name="fecha" id="fecha">
+                <br><br>
+        
+                <!--Número-->
+                <label for="numero">Introduce un número:</label>
+                <input type="number" name="numero" id="numero">
+                <br><br>
+        
+                <!--Rango-->
+                <label for="rango">Rango:</label>
+                <input type="range" name="rango" id="rango" min="0" max="20">
+                <br><br>
+        
+                <!--Tiempo-->
+                <label for="hora">Hora:</label>
+                <input type="time" name="tiempo" id="tiempo">
+                <br><br>
+        
+                <!--Botón-->
+                <input type="submit" value="Enviar">
+                <br><br>
+            </form>
+
+        </aside>
+
+        <!--Pie de página-->
+        <footer>
+            <p>
+                <strong>Hecho con Visual Studio Code</strong>
+                <br>Enlace del editor: 
+                <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
+            </p>
+        </footer>
 
     </div>
 
