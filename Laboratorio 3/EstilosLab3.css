@@ -48,14 +48,27 @@ nav ul li{
 
 #content{
     float: left;
-    width: 80%;
+    /*calc se utiliza para restar el padding de los márgenes. (Se utiliza el doble de pixeles)*/
+    width: calc(80% - 80px);
     min-height:500px;
     background: rgb(169, 197, 169);
+    padding: 40px;
 }
 
 aside{
     float: left;
-    width: 20%;
+    /*calc se utiliza para restar el padding de los márgenes. (Se utiliza el doble de pixeles)*/
+    width: calc(20% - 20px);
     min-height:500px;
     background: rgb(104, 182, 138);
+    padding: 10px;
+}
+
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+
 }
