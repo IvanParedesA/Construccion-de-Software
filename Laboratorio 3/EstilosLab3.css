@@ -1,3 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body{
+    /*Color de fondo*/
     background: lightgray;
+    /*Tipo de letra (seguido de alternativas)*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{
+    width: 1100px;
+    /*Auto centra el contenido de la página web*/
+    margin: 0px auto;
+    border: 1px solid black;
+}
+
+header{
+    background: seagreen;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    /*line-height tiene la misma altura que tiene la caja*/
+    line-height: 100px;
+    color: black;
+    border-bottom: 3px dashed black
 }
