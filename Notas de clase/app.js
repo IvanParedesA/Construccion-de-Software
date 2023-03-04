@@ -22,9 +22,16 @@ const http = require('http');
 const server = http.createServer( (request, response) => {
     console.log(request.url);
     response.setHeader('Content-Type', 'text/html');
+    response.write("<!DOCTYPE html>");
+    response.write("<html>");
+    response.write('<head><meta charset="utf-8"></head><body>');
+
     response.write("<h1>Hot cakes</h1>");
-    response.write("hola desde Node!");
+    response.write('<a href="/pedir">Pide aquí tu desayuno</a');
+    response.write("</body></html>")
+
     response.end();
+    
 });
 
 server.listen(3000);
