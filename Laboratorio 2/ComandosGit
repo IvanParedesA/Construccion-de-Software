@@ -1,0 +1,9 @@
+Aquí están algunos comando de git que son útiles 
+para guardar tus documentos en un repositorio:
+
+git status: Te da el estado del repositorio
+git add: agregar cambios a la transacción
+git add -A
+git commit: Hace la transacción
+git commit -m "..."
+git push
