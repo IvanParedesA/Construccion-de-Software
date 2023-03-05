@@ -59,12 +59,14 @@
                 <h2>Contacto</h2>
                 <!--Imagen-->
                 <img src="Foto de perfil pequeña.jpg" alt="Foto de Perfil" width="200px">
+                <br>
                 <p>Soy estudiante del Instituto Tecnológico y de Estudios Superiores de Moneterrey Campus Querétaro y
                     actualmente estoy en el 4to semestre de la carrera de Ingeniería en Tecnologías Computacionales. Dentro de 
                     mi área de estudios, uno de los temas que más me interesan son la inteligencia artificial y las criptomonedas. 
                     Hablando de otro tipo de intereses, me gusta todo lo que tenga que ver con los autos y además uno de mis
                     pasatiempos favoritos es jugar videojuegos. Como tal hoy en día no estoy llevando a cabo un proyecto personal, 
                     pero soy vicepresidente del grupo estudiantil ACM, el cual está dirigido principalmente a la programación.</p>
+                <br>
                 <h3>Tabla de información</h3>
                 <!--Tabla-->
                 <table>
@@ -87,201 +89,210 @@
                     <!--Pie de la tabla (Por el momento vacío)-->
                     <tfoot></tfoot>
                 </table>
+                <br>
             </article>
 
             <article class="article">
                 <h2>Preguntas Laboratorio 1</h2>
+                <br>
+
                 <ul>
-                    <li>¿Cuál es la diferencia entre Internet y la World Wide Web?</li>
+                    <li>¿Cuál es la diferencia entre Internet y la World Wide Web?</li><br>
                     <p>La diferencia es que Internet es el nombre que recibe la conexión que hay entre todas las computadoras
                         alrededor del mundo, mientras que la World Wide Web es la colección de páginas que existe en esa red de 
                         computadoras.</p>
+                    <br>
             
-                    <li>¿Cuáles son las partes de un URL?</li>
+                    <li>¿Cuáles son las partes de un URL?</li><br>
                     <p>El URL está dividido por diferentes partes, cada una con su función específica. 
-                        De acuerdo con Edix (2022), las partes de un URL son las siguientes:</p>
+                        De acuerdo con Edix (2022), las partes de un URL son las siguientes:</p><br>
                         <!--Lista dentro de otra lista-->
                         <ul>
                             <li>Esquema: es el protocolo de inicio empleado para la transmisión de datos entre ordenadores y la 
                                 recuperación de la información de internet. En la mayor parte de los casos el esquema se 
-                                corresponde con: http o https.</li>
-                            <li>Host: normalmente, para el protocolo http, el host es: www.</li>
-                            <li>Dominio: corresponde con el nombre del dominio de cada sitio web, como: edix.com.</li>
+                                corresponde con: http o https.</li><br>
+                            <li>Host: normalmente, para el protocolo http, el host es: www.</li><br>
+                            <li>Dominio: corresponde con el nombre del dominio de cada sitio web, como: edix.com.</li><br>
                             <li>Puerto: define el nombre del puerto según el host. Para el protocolo http, el puerto por 
-                                defecto es 80, pero esta parte suele omitirse.</li>
-                            <li>Directorio (o ruta): define el camino que se debe seguir en el servidor. Por ejemplo: blog.</li>
-                            <li>Nombre de archivo: define más detalladamente las características del documento: videos-gratis</li>
+                                defecto es 80, pero esta parte suele omitirse.</li><br>
+                            <li>Directorio (o ruta): define el camino que se debe seguir en el servidor. Por ejemplo: blog.</li><br>
+                            <li>Nombre de archivo: define más detalladamente las características del documento: videos-gratis</li><br>
                         </ul>
                     <br>
                     
-                    <li>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</li>
+                    <li>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</li><br>
                     <p>Cuando nos referimos a los métodos, estamos hablando de un formato de comunicación entre el cliente y el
-                        servidor web. De acuerdo con Williams Morales (2021), este es el propósito de cada uno de estos métodos:</p>
+                        servidor web. De acuerdo con Williams Morales (2021), este es el propósito de cada uno de estos métodos:</p><br>
                         <!--Lista dentro de otra lista-->
                         <ul>
                             <li>GET: Realiza una petición a un recurso específico y no permite el envío de datos a excepción si 
                                 dichos datos se envían como parámetro en la Url que realiza la petición. Esta petición retorna 
                                 tanto la cabecera como el contenido. puede retornar una respuesta en formato HTML, JSON, XML, 
-                                Imágenes o JavaScript.</li>
+                                Imágenes o JavaScript.</li><br>
                             <li>HEAD: Es parecido al método GET, con la diferencia de que este no retorna ningún contenido 
                                 HTTP Response. Se utiliza normalmente cuando solo se está interesado en el código de HTTP de 
                                 Respuesta y el encabezado (Headers). Cuando se tiene un sitio web con varios enlaces web y se 
                                 requiere verificar si hay “enlaces rotos”; entonces se realiza la petición a todos los enlaces 
-                                correspondientes y verifica el estado de dichos enlaces.</li>
+                                correspondientes y verifica el estado de dichos enlaces.</li><br>
                             <li>POST: Permite enviar datos al servidor por medio del cuerpo (body) y nada por la Url como se 
                                 emplea en el método GET. El tipo de cuerpo de solicitud se define en la cabecera Content-Type. 
                                 Semánticamente se utiliza para registrar información, similar al INSERT de datos a nivel de base 
                                 de datos. A pesar de eso, se puede forzar este método de petición HTTP para otras acciones como 
-                                actualización, eliminación de registro, como carga de archivos, etc.</li>
+                                actualización, eliminación de registro, como carga de archivos, etc.</li><br>
                             <li>PUT: Es similar al método de petición POST, solo que el método PUT es idempotente; es decir puede 
                                 ser ejecutado varias veces y tiene el mismo efecto. Semánticamente, se utiliza para la actualización 
                                 de información existente, es semejante a un UPDATE de datos a nivel de base de datos. Los requests 
-                                de un PUT usualmente se envían los datos por formularios, formato JSON entre otros.</li>
+                                de un PUT usualmente se envían los datos por formularios, formato JSON entre otros.</li><br>
                             <li>PATCH: Este método se emplea para modificaciones parciales de un recurso en particular. Se debe 
                                 revisar si el servidor es compatible. Para averiguar si el servidor aceptar peticiones PATCH 
                                 notifica su compatibilidad en el header Allow o Access-Control-Allow-Methods, otra indicación 
                                 de que estas peticiones están permitidas son el header Accept-Patch. Semánticamente, realiza 
-                                una especie de UPDATE a nivel de base de datos.</li>
+                                una especie de UPDATE a nivel de base de datos.</li><br>
                             <li>DELETE: Este método de petición permite eliminar un recurso específico. También es idempotente; 
                                 es decir puede ser ejecutado varias veces y tiene el mismo efecto similar al PUT y GET. 
-                                Semánticamente se utiliza para eliminar de información existente.</li>
+                                Semánticamente se utiliza para eliminar de información existente.</li><br>
                         </ul>
                     <br>
             
                     <li>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario 
-                        y contraseña en algún sitio? ¿Por qué?</li>
+                        y contraseña en algún sitio? ¿Por qué?</li><br>
                     <p>Se debe usar el método POST, pues este es el que ofrece más discreción. De acuerdo con IONOS (2020), con
                         este método los datos no se muestran en el caché ni tampoco en el historial de navegación. La flexibilidad 
                         del método POST también resulta muy útil: no solo se pueden enviar textos cortos, sino también otros tipos 
-                        de información, como fotos o vídeos. </p>
-                    
+                        de información, como fotos o vídeos. </p><br>
+                    <br>
+
                     <li>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un 
-                        URL?</li>
-                    <p>El método que se utiliza es GET.</p>
+                        URL?</li><br>
+                    <p>El método que se utiliza es GET.</p><br>
+                    <br>
             
-                    <li>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</li>
+                    <li>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</li><br>
                     <p>No significa que haya ocurrido un error, sino todo lo contrario, el código 200 indica que la solicitud ha 
-                        sido un éxito.</p>
+                        sido un éxito.</p><br>
+                    <br>
             
                     <li>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al 
-                        sitio y se encontró con un error 404? ¿Por qué?</li>
+                        sitio y se encontró con un error 404? ¿Por qué?</li><br>
                     <p>No es responsabilidad del desarrollador corregir como tal el sitio web ya que este código de error sale
                         cuando el contenido buscado de la web ha sido eliminado o modificado (intensionalmente), por lo que 
                         es probable que lo que se busca esté ahora en una URL distinta. Normalmente puede suceder porque el
                         usuario ha tecleado mal el URL o introdujo uno antiguo sin el conocimiento de que este cambió. Más bien, 
-                        lo que puede hacer el desarrollador es notificar previamente a los usuarios.</p>
+                        lo que puede hacer el desarrollador es notificar previamente a los usuarios.</p><br>
+                    <br>
             
                     <li>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder 
-                        al sitio y se encontró con un error 500? ¿Por qué?</li>
+                        al sitio y se encontró con un error 500? ¿Por qué?</li><br>
                     <p>En este caso sí es responsabilidad del desarrollador corregir este error ya que lo que significa
                         es que ha habido un problema con el servidor del sitio web. Por esta razón, los usuarios de la página
-                        no pueden hacer nada para arreglar el error más que esperar a que sea reparado.</p>
+                        no pueden hacer nada para arreglar el error más que esperar a que sea reparado.</p><br>
+                    <br>
             
                     <li>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona 
-                        algunos elementos de HTML 4 que en HTML5 estén desaprobados.</li>
+                        algunos elementos de HTML 4 que en HTML5 estén desaprobados.</li><br>
                     <p>Cuando un atributo está desaprobado significa que con la nueva actualización de Html, este ha sido
                         reemplazado por nuevos elementos que hacen lo mismo o mejoran las funciones. Sin embargo, muchos
                         navegadores siguen siendo compatibles con los atributos desaprobados hasta que estos finalmente se
-                        vuelven obsoletos. Algunos ejemplos son los siguientes:</p>
+                        vuelven obsoletos. Algunos ejemplos son los siguientes:</p><br>
                         <!--Lista dentro de otra lista-->
                         <ul>
-                            <li>applet: Reemplazado por el tag HTML object.</li>
-                            <li>dir: Reemplazado por el tag HTML ul.</li>
-                            <li>isindex: Reemplazado por el tag HTML input.</li>
-                            <li>menu: Reemplazado por el tag HTML ul.</li>
+                            <li>applet: Reemplazado por el tag HTML object.</li><br>
+                            <li>dir: Reemplazado por el tag HTML ul.</li><br>
+                            <li>isindex: Reemplazado por el tag HTML input.</li><br>
+                            <li>menu: Reemplazado por el tag HTML ul.</li><br>
                         </ul>
                     <br>
             
-                    <li>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</li>
+                    <li>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</li><br>
                     <p>HTML4 tuvo su lanzamiento en 1999 y HTML5 está disponible desde 2014. Con HTML5 hubo pocos cambios para
                         las etiquetas de marcado salvo por algunas que fueron simplificadas. Sin embargo, HTML5 se basa en un
                         estándar y un análisis sintactico nuevos. Entre algunas de las características que lo diferencian es que
                         HTML5 incluye elementos multimedia, es más seguro y esta es una versión de HTML que permanecerá
                         actualizandose a lo largo del tiempo, así que ya no se tiene planeado un HTML6. Además, con las nuevas
-                        funcionalidades, HTML5 ya no es completamente dependiente de CSS o JavaScript.
-                    </p>
+                        funcionalidades, HTML5 ya no es completamente dependiente de CSS o JavaScript.</p><br>
+                    <br>
             
-                    <li>¿Qué componentes de estructura y estilo tiene una tabla?</li>
-                    <p>De acuerdo con (De León, s.f.) los componentes del elemento table son los siguientes:</p>
+                    <li>¿Qué componentes de estructura y estilo tiene una tabla?</li><br>
+                    <p>De acuerdo con (De León, s.f.) los componentes del elemento table son los siguientes:</p><br>
                         <!--Lista dentro de otra lista-->
                         <ul>
-                            <li>caption: Provee un título para la tabla</li>
-                            <li>colgroup: agrupa columnas temáticamente</li>
+                            <li>caption: Provee un título para la tabla</li><br>
+                            <li>colgroup: agrupa columnas temáticamente</li><br>
                             <li>col: aplica atributos comunes y estilos a una o más columnas. Sólo puede ser declarado 
-                                como hijo de colgroup.</li>
-                            <li>tbody: representa a un cuerpo de la tabla.</li>
-                            <li>thead: representa la sección de encabezado de la tabla.</li>
-                            <li>tfoot: representa la sección de pie de la tabla.</li>
-                            <li>tr: representa una fila. Puede ser declarado como hijo de tbody, thead, tfoot o table.</li>
-                            <li>td: representa a una celda regular. Sólo puede ser declarado como hijo de tr.</li>
-                            <li>th: representa a una celda de encabezado. Sólo puede ser declarado como hijo de tr.</li>
+                                como hijo de colgroup.</li><br>
+                            <li>tbody: representa a un cuerpo de la tabla.</li><br>
+                            <li>thead: representa la sección de encabezado de la tabla.</li><br>
+                            <li>tfoot: representa la sección de pie de la tabla.</li><br>
+                            <li>tr: representa una fila. Puede ser declarado como hijo de tbody, thead, tfoot o table.</li><br>
+                            <li>td: representa a una celda regular. Sólo puede ser declarado como hijo de tr.</li><br>
+                            <li>th: representa a una celda de encabezado. Sólo puede ser declarado como hijo de tr.</li><br>
                         </ul>
                     <br>
             
-                    <li>¿Cuáles son los principales controles de una forma HTML5?</li>
-                    <p>Los principales controles son los siguientes:</p>
+                    <li>¿Cuáles son los principales controles de una forma HTML5?</li><br>
+                    <p>Los principales controles son los siguientes:</p><br>
                         <!--Lista dentro de otra lista-->
                         <ul>
-                            <li>number: campo de entrada para la introducción de un número</li>
-                            <li>range: permite elegir entre un rango de valores</li>
-                            <li>date: selector de fecha</li></liZ>
-                            <li>color: permite al usuario elegir entre una selección de colores</li>
-                            <li>datalist: permite a los usuarios elegir entre una lista de opciones sugeridas</li>
-                            <li>tel: campo de entrada para un número telefónico</li>
-                            <li>email: campo de entrada para un email</li>
-                            <li>url: campo de entrada para un url</li>
-                            <li>text: campo de entrada para texto</li>
-                            <li>time: campo de entrada para una hora específica</li>
+                            <li>number: campo de entrada para la introducción de un número</li><br>
+                            <li>range: permite elegir entre un rango de valores</li><br>
+                            <li>date: selector de fecha</li></liZ><br>
+                            <li>color: permite al usuario elegir entre una selección de colores</li><br>
+                            <li>datalist: permite a los usuarios elegir entre una lista de opciones sugeridas</li><br>
+                            <li>tel: campo de entrada para un número telefónico</li><br>
+                            <li>email: campo de entrada para un email</li><br>
+                            <li>url: campo de entrada para un url</li><br>
+                            <li>text: campo de entrada para texto</li><br>
+                            <li>time: campo de entrada para una hora específica</li><br>
                         </ul>
                     <br>
             
                     <li>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para 
-                        descubrirlo: http://html5test.com/ </li>
+                        descubrirlo: http://html5test.com/ </li><br>
                     <p>Yo utilizo Firefox 110.0 en Windows 10 y utilizando el test, descubrí que mi navegador tiene
-                        una puntuación de 466/555.</p>
+                        una puntuación de 466/555.</p><br>
             
-                    <li>¿Cuál es el ciclo de vida de los sistemas de información? </li>
+                    <li>¿Cuál es el ciclo de vida de los sistemas de información? </li><br>
                     <p>Un sisema de información atraviesa 7 fases durante su ciclo de vida, los cuales están enlistados a
-                        continuación:</p>
+                        continuación:</p><br>
                         <!--Lista dentro de otra lista-->
                         <ol>     
-                            <li>Fase de planificación: se prepara el diseño y posterior implementación del sistema.</li>  
+                            <li>Fase de planificación: se prepara el diseño y posterior implementación del sistema.</li><br>
                             <li>Fase de análisis: se busca concretar una serie de requisitos, que son los que regirán el 
-                                nuevo sistema o los cambios a introducir en el antiguo.</li>     
-                            <li>Fase de diseño: se identifican soluciones potenciales, se evalúan y se elige la más conveniente.</li>
-                            <li>Fase de desarrollo: Inicio de la producción.</li>
+                                nuevo sistema o los cambios a introducir en el antiguo.</li><br>
+                            <li>Fase de diseño: se identifican soluciones potenciales, se evalúan y se elige la más conveniente.</li><br>
+                            <li>Fase de desarrollo: Inicio de la producción.</li><br>
                             <li>Fase de integración y periodo de pruebas: corroborar que el diseño propuesto cumple con los 
-                                requisitos de negocio establecidos.</li>
+                                requisitos de negocio establecidos.</li><br>
                             <li>Fase de implementación: instalación del hardware y software elegidos, crear las aplicaciones 
                                 correspondientes, someterlas a pruebas, crear la documentación pertinente y capacitar a 
-                                los usuarios.</li>
+                                los usuarios.</li><br>
                             <li>Fase de mantenimiento: consiste en introducir los ajustes necesarios para mejorar el rendimiento 
-                                y corregir los problemas que puedan surgir. </li>
+                                y corregir los problemas que puedan surgir. </li><br>
                         </ol>
                     <br>
             
-                    <li>¿Cuál es el ciclo de desarrollo de sistemas de información?</li>
+                    <li>¿Cuál es el ciclo de desarrollo de sistemas de información?</li><br>
                     <p>El cilo de desarrollo de un sistema de información empieza por analizar los tipos de requerimientos
-                        del mismo:</p>
+                        del mismo:</p><br>
                         <!--Lista dentro de otra lista-->
                         <ul>
                             <li>Funcionales: requisitos necesarios para hacer que el sistema funcione. Ej: registrar 
-                                usuarios, loguearse, acceder a un listado de clientes.</li>
+                                usuarios, loguearse, acceder a un listado de clientes.</li><br>
                             <li>No funcionales: son los que no están directamente relacionados con la funcionalidad 
-                                del sistema. Ej: el sistema deberá utilizar navegador Mozilla Firefox versión n o más.</li>
+                                del sistema. Ej: el sistema deberá utilizar navegador Mozilla Firefox versión n o más.</li><br>
                         </ul>
                     <br>
-                    <p>Los siguientes pasos están directamente relacionados con su desarrollo:</p>
+                    <p>Los siguientes pasos están directamente relacionados con su desarrollo:</p><br>
                         <!--Lista dentro de otra lista-->
                         <ul>
                             <li>Fase de planeación: se especifica un plan para el proyecto que guiará a todos los interesados 
-                                o stakeholders a conseguir el producto especificado en el levantamiento de requerimientos.</li>
+                                o stakeholders a conseguir el producto especificado en el levantamiento de requerimientos.</li><br>
                             <li>Fase de diseño: los analistas o ingenieros de software crean un modelo abstracto del sistema 
                                 a construir basado en los requerimientos funcionales y no funcionales planteados en la 
                                 especificación de requerimientos. proporciona detalles sobre arquitectura del software, 
-                                estructuras de datos, interfaces y componentes que se necesitan para implementar el sistema.</li>
-                            <li>Fase de desarrollo: se genera el código fuente en el lenguaje de programación escogido.</li>
-                            <li>Fase de implementación: se lleva a cabo la puesta en marcha del producto de software.</li>
+                                estructuras de datos, interfaces y componentes que se necesitan para implementar el sistema.</li><br>
+                            <li>Fase de desarrollo: se genera el código fuente en el lenguaje de programación escogido.</li><br>
+                            <li>Fase de implementación: se lleva a cabo la puesta en marcha del producto de software.</li><br>
                         </ul>
                 </ul>
             </article>
