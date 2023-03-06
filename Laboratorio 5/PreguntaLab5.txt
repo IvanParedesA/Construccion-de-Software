@@ -1,0 +1,10 @@
+Describe Material Design
+
+De acuerdo con KeepCoding (2022), material design es un estilo de diseño desarrollado por Google que se 
+presentó al público en 2014, a la par de la versión Android Lollipop. Este se enfoca en los aspectos 
+visuales que corresponden al sistema operativo Android, aunque también es una normativa que se aplica 
+en diferentes páginas web y plataformas.
+
+Referencia: 
+KeepCoding, R. (2022, 5 abril). ¿Qué es el material design? 
+KeepCoding Tech School. https://keepcoding.io/blog/que-es-material-design/
