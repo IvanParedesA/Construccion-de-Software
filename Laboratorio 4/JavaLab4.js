@@ -63,3 +63,42 @@ if(respuesta == suma){
 else{
   document.write("No lograste resolver adecuadamente la suma y tardaste " + diferenciaSegundos + " segundos. <br>");
 }
+
+//Problema 3
+document.write("<br> Problema 3: <br>");
+
+//Definimos el arreglo
+const arregloProblema3 = [1, 4, -9, 0, 5, 2, -8, 2, 0, 9, 1, 8, -5, 7, 5, 0, 9].sort();
+
+//Mostramos el arreglo
+document.write("Este es el arreglo: ");
+document.write(arregloProblema3 + "<br>");
+
+//Definimos la función
+function contador(arreglo){
+  //Contadores
+  let numerosNegativos = 0;
+  let numeroDeCeros = 0;
+  let numerosPositivos = 0;
+
+  //Ciclo para encontrar los números
+  for(let i = 0; i < arreglo.length; i++){
+    if(arreglo[i] < 0){
+      numerosNegativos ++;
+    }
+    else if(arreglo[i] === 0){
+      numeroDeCeros ++;
+    }
+    else if(arreglo[i] > 0){
+      numerosPositivos ++;
+    }
+  }
+
+  //Enviar las respuestas
+  document.write("La cantidad de números negativos en el arreglo fue de: " + numerosNegativos + "<br>");
+  document.write("La cantidad de ceros en el arreglo fue de: " + numeroDeCeros + "<br>");
+  document.write("La cantidad de números mayores a cero es de: " + numerosPositivos + "<br>");
+}
+
+//Llamar a la función
+console.log(contador(arregloProblema3));
