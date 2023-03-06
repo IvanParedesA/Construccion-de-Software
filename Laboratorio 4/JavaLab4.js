@@ -144,8 +144,32 @@ document.write("Este es el número de prueba: " + numeroProblema5 + "<br>");
 
 //Definimos la función
 function inverso(numero){
-  document.write("Este es el número inverso: " + Number(numero.toString().split('').reverse().join('')));
+  document.write("Este es el número inverso: " + Number(numero.toString().split('').reverse().join('')) + "<br>");
 }
 
 //Llamamos a la función
 console.log(inverso(numeroProblema5));
+
+//Problema 6
+document.write("<br> Problema 6: <br>");
+
+function Persona(nombre, edad){
+  this.nombre = nombre;
+  this.edad = edad;
+
+  //Atributo privado
+  let dni = "1234567890";
+
+  this.getDni = function(){
+    return dni;
+  }
+
+  this.saludar = function(){
+    document.write("Hola, soy " + nombre + " tengo " + " años mi dni es " + this.getDni());
+  }
+}
+
+let objetoPersona = new Persona("Iván paredes", 20);
+
+objetoPersona.saludar();
+
