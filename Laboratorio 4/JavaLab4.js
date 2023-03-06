@@ -133,4 +133,19 @@ function promedios(arreglo){
 //Llamar a la función
 console.log(promedios(arregloProblema4));
 
+//Problema 5
+document.write("<br> Problema 5: <br>");
 
+//Definimos un número de prueba
+const numeroProblema5 = 12345;
+
+//Mostramos el número de prueba
+document.write("Este es el número de prueba: " + numeroProblema5 + "<br>");
+
+//Definimos la función
+function inverso(numero){
+  document.write("Este es el número inverso: " + Number(numero.toString().split('').reverse().join('')));
+}
+
+//Llamamos a la función
+console.log(inverso(numeroProblema5));
