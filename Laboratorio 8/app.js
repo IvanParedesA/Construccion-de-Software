@@ -2,6 +2,7 @@
 // Iván Ricardo Paredes Avilez A01705083
 // 23/02/2022
 
+const file = require('fs');
 
 //Una función que reciba un arreglo de números y devuelva su promedio
 const arreglo1 = [1,2,3,4,5,6,7,8,9,10];
@@ -39,7 +40,7 @@ function calcular_IMC(peso, altura){
     return IMC;
 }
 
-console.log(calcular_IMC(peso1, altura1))
+console.log(calcular_IMC(peso1, altura1));
 
 //Sigue la demostración del profesor en la sesión de clase sobre los ejemplos básicos para crear un servidor 
 //web que se ejecute sobre node, reciba peticiones de un cliente, y le responda.
@@ -48,7 +49,15 @@ console.log(calcular_IMC(peso1, altura1))
 //creaste anteriormente en tus laboratorios.
 
 const http = require('http');
-
-const server = http.createserver( (request, response)=>{
-    console.log(request.url)
+file.readFile("lab1.html", function (err, html) {
+    if (err) {
+        throw err;
+    }
+    const server = http.createServer((request, response) => {
+        console.log(request.url);
+        response.setHeader('Content-Type', 'text/html');
+        response.write(html);
+        response.end();
+    })
+    server.listen(3000);
 });
