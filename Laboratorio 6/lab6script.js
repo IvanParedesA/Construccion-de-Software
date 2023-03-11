@@ -19,7 +19,7 @@ myInput.onkeyup = function() {
 
     //Validar letras minúsculas
     var letrasMinusculas = /[a-z]/g;
-    if(myInput.ariaValueMax.match(letrasMinusculas)) {
+    if(myInput.value.match(letrasMinusculas)) {
         minuscula.classList.remove("invalid");
         minuscula.classList.add("valid");
     } else {

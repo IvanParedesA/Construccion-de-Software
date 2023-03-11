@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratorio 6</title>
+    <link rel="stylesheet" href="estilosLab6.css" />
 </head>
 
 <body>
     
     <h1>Validador de Password</h1>
-    <p>Por favor, rellena este registro</p>
+    <p>Por favor, rellena este registro.</p>
 
     <div class="container">
         <form action="/action_page.php">
-            <label for="username">Username</label>
+            <label for="username">Nombre de Usuario</label>
             <input type="text" id="username" name="username" required>
 
-            <label for="psw">Password</label>
+            <label for="psw">Contraseña</label>
             <input type="password" id="psw" name="psw" pattern="(?=.*\d)
             (?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe tener
             por lo menos 1 número, 1 letra mayúscula, 1 letra minúscula 

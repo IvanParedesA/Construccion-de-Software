@@ -1,0 +1,59 @@
+/* Estilo para todos los campos de Input */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+/* Estilo para el botón de submit */
+input[type=submit] {
+    background-color: darkslategrey;
+    color: white;
+}
+
+/* Estilo para el contenedor de los inputs */
+.container {
+    background-color: floralwhite;
+    padding: 20px;
+}
+
+/* Caja de mensajes que se muestra cuando el usuario da click en el campo de la contraseña */
+#mensaje {
+    display:none;
+    background: floralwhite;
+    color: black;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#mensaje p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+/* Añadir una palomita y texto verde cuando se cumplan los requirimientos */
+.valid {
+    color: green;
+}
+
+.valid::before {
+    position: relative;
+    left: -35px;
+    content: "✔"
+}
+
+/* Añadir una X y color rojo cuando no se cumplan los requirimientos */
+.invalid {
+    color: red;
+}
+
+.invalid::before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
