@@ -10,7 +10,32 @@ const server = http.createServer( (request, response) => {
         response.write("<html>");
         response.write('<head><meta charset="utf-8"></head><body>');
         response.write("<h1>Agencia Vehícular</h1>");
-        response.write('<a href="/elegir">Elige tu próximo auto</a>');
+        
+        response.write('<form action="pedir" method="POST">');
+
+        let form = `
+            <fieldset>
+                <legend>Escoge tu nuevo auto:</legend>
+                <div>
+                    <input type="checkbox" id="Audi" name="Audi">
+                    <label for="Audi">Audi</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Bmw" name="Bmw">
+                    <label for="Bmw">Bmw</label>
+                </div>
+                <div>
+                    <input type="number" id="meses" name="meses" value="0">
+                    <label for="meses">meses de financiamiento</label>
+                </div>
+            </fieldset>
+            <br>
+            <input type="submit" value="pedir">
+        `;
+
+        response.write(form);
+        response.write("</form>");
+
         response.write("</body></html>");
         response.end();
 
@@ -25,7 +50,7 @@ const server = http.createServer( (request, response) => {
         response.end();
 
     } else {
-        
+
         response.statusCode = 404;
         response.setHeader('Content-Type', 'text/html');
         response.write("<!DOCTYPE html>");
