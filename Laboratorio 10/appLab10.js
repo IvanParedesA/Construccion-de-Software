@@ -10,8 +10,18 @@ const server = http.createServer( (request, response) => {
         response.write("<html>");
         response.write('<head><meta charset="utf-8"></head><body>');
         response.write("<h1>Agencia Vehícular</h1>");
-        
-        response.write('<form action="pedir" method="POST">');
+        response.write('<a href="/pedir">Pide aquí tu nuevo vehículo</a>')
+        response.write("</body></html>");
+        response.end();
+
+    } else if(request.url === "/pedir" && request.method === "GET") {
+
+        response.setHeader('Content-Type', 'text/html');
+        response.write("<!DOCTYPE html>");
+        response.write("<html>");
+        response.write('<head><meta charset="utf-8"></head><body>');
+        response.write("<h1>Agencia Vehícular</h1>");
+        response.write('<form action="/pedir" method="POST">');
 
         let form = `
             <fieldset>
@@ -35,18 +45,12 @@ const server = http.createServer( (request, response) => {
 
         response.write(form);
         response.write("</form>");
-
-        response.write("</body></html>");
+        response.write("</body><html>");
         response.end();
 
-    } else if(request.url === "/elegir") {
+    } else if(request.url === "/pedir" && request.method === "POST") {
 
-        response.setHeader('Content-Type', 'text/html');
-        response.write("<!DOCTYPE html>");
-        response.write("<html>");
-        response.write('<head><meta charset="utf-8"></head><body>');
-        response.write("<h1>Agencia Vehícular</h1>");
-        response.write("</body><html>");
+        response.write("Pedido recibido");
         response.end();
 
     } else {
@@ -56,8 +60,7 @@ const server = http.createServer( (request, response) => {
         response.write("<!DOCTYPE html>");
         response.write("<html>");
         response.write('<head><meta charset="utf-8"></head><body>');
-        response.write("<h1>Lo sentimos, el auto que estás buscando no existe</h1>");
-        response.write("<h2>Error 404 NOT FOUND</h2>")
+        response.write("<h1>Error 404 NOT FOUND. Lo sentimos, el auto que estás buscando no existe</h1>");
         response.end();
     }
 
