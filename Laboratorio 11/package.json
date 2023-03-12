@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/IvanParedesA/Construccion-de-Software/issues"
   },
-  "homepage": "https://github.com/IvanParedesA/Construccion-de-Software#readme"
+  "homepage": "https://github.com/IvanParedesA/Construccion-de-Software#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
 }
