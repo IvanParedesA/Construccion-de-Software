@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 
 const router = express.Router();
 
@@ -42,6 +43,10 @@ router.post('/pedir', (request, response, next) => {
     console.log(request.body);
 
     response.send("Pediste " + request.body.pizzas + " pizzas");
+});
+
+router.get('/pedido', (request, response, next) => {
+    response.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
 });
 
 
