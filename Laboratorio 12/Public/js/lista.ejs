@@ -68,7 +68,15 @@
 
         <main class="container">
             
-
+            <% if (pizzas.length > 0) { %>
+                <ul>
+                    <% for (let pizza of pizzas) { %>
+                        <li><%= pizza %></li>
+                    <% } %>
+                </ul>
+            <% } else { %>
+                <h1>No hay pizzas >:( </h1>
+            <% } %>   
 
         </main>
 

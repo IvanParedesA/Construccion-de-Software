@@ -15,7 +15,8 @@ const pizzas = [
 ];
 
 router.get('/lista', (request, response, next) => {
-    response.render('lista');
+    response.render('lista', {pizzas: pizzas});
+
 })
 
 router.get('/pedir', (request, response, next) => {
