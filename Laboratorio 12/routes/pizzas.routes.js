@@ -3,6 +3,21 @@ const path = require('path');
 
 const router = express.Router();
 
+const pizzas = [
+    "hawaiana",
+    "peperoni",
+    "suprema",
+    "mexicana",
+    "jamón",
+    "queso",
+    "champiñones",
+    "salchicha"
+];
+
+router.get('/lista', (request, response, next) => {
+    response.render('lista');
+})
+
 router.get('/pedir', (request, response, next) => {
 
     let html = `
