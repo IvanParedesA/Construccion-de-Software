@@ -25,6 +25,8 @@ app.use('/pizzas', pizzasRutas);
 app.use((request, response, next) => {
     console.log('Otro middleware!');
 
+    response.status(404);
+
     //Manda la respuesta
     response.send('Error 404 Not Found');
 });
