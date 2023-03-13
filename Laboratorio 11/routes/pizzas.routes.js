@@ -12,7 +12,7 @@ router.get('/pedir', (request, response, next) => {
             </head>
             <body>
                 <h1>Pizzería</h1>
-                <form action="/pedir" method="POST">
+                <form action="/pizzas/pedir" method="POST">
                     <fieldset>
                         <legend>Escoge tu pizza:</legend>
                         <div>
@@ -20,7 +20,7 @@ router.get('/pedir', (request, response, next) => {
                             <label for="hawaiana">Hawaiana</label>
                         </div>
                         <div>
-                            <input type"checkbox" id="peperoni" name="peperoni">
+                            <input type="checkbox" id="peperoni" name="peperoni">
                             <label for="peperoni">Peperoni</label>
                         </div>
                         <div>
@@ -29,7 +29,7 @@ router.get('/pedir', (request, response, next) => {
                         </div>
                     </fieldset>
                     <br>
-                    <inputtype="submit" value="pedir">
+                    <input type="submit" value="pedir">
                 </form>
             </body>
         </html>
