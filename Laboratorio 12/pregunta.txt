@@ -1,0 +1,16 @@
+¿Qué otros templating engines existen para node?
+
+En forma de lisa algunos serían:
+
+- Mustache
+- Handlebars
+- doT
+- Nunjucks
+- Underscore
+- Pug
+- Webix
+- Hogan
+- Marko
+- Jsrender
+- Squirrelly
+- Template 7
