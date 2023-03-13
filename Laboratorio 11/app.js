@@ -18,10 +18,7 @@ app.use('/home', (request, response, next) => {
     response.send('Bienvenido a casa!');
 });
 
-app.use('/pedir', (request, response, next) => {
-
-    console.log(request.body);
-    console.log(request.body.cafe);
+app.get('/pedir', (request, response, next) => {
 
     let html = `
         <!DOCTYPE html>
@@ -57,11 +54,17 @@ app.use('/pedir', (request, response, next) => {
     response.send(html);
 });
 
+app.post('/pedir', (request, response, next) => {
+    console.log(request.body);
+
+    response.send("Pediste " + request.body.hot_cakes + " hot cakes");
+});
+
 app.use((request, response, next) => {
     console.log('Otro middleware!');
 
     //Manda la respuesta
-    response.send('¡Hola mundo!');
+    response.send('Error 404 Not Found');
 });
 
 app.listen(3000);
