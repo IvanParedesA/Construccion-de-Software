@@ -10,7 +10,7 @@ const pizzas = [
     {
         nombre: "peperoni",
         imagen: "https://babycocina.com/wp-content/uploads/2021/02/pizza-pepperoni.jpg",
-        descripción: "Rica pizza de peperoni",
+        descripcion: "Rica pizza de peperoni",
         handle: "@peperoni",
         ingredientes: "peperoni",
         precio: "200",
@@ -18,7 +18,7 @@ const pizzas = [
     {
         nombre: "suprema",
         imagen: "https://recetinas.com/wp-content/uploads/2022/06/pizza-suprema.jpg",
-        descripción: "Rica pizza de aceitunas, peperoni, pimiento y carne",
+        descripcion: "Rica pizza de aceitunas, peperoni, pimiento y carne",
         handle: "@suprema",
         ingredientes: "aceitunas, peperoni, pimiento, carne",
         precio: "200",
@@ -26,7 +26,7 @@ const pizzas = [
     {
         nombre: "mexicana",
         imagen: "https://recetinas.com/wp-content/uploads/2022/07/pizza-mexicana.jpg",
-        descripción: "Rica pizza de chorizo, chile y cebolla",
+        descripcion: "Rica pizza de chorizo, chile y cebolla",
         handle: "@mexicana",
         ingredientes: "chorizo, chile, cebolla",
         precio: "200",
@@ -34,7 +34,7 @@ const pizzas = [
     {
         nombre: "jamón",
         imagen: "https://imag.bonviveur.com/presentacion-final-de-la-pizza-prosciutto-o-con-jamon-cocido.jpg",
-        descripción: "Rica pizza de jamón",
+        descripcion: "Rica pizza de jamón",
         handle: "@jamon",
         ingredientes: "jamón",
         precio: "200",
@@ -42,7 +42,7 @@ const pizzas = [
     {
         nombre: "queso",
         imagen: "https://live.mrf.io/statics/i/ps/irecetasfaciles.com/wp-content/uploads/2019/08/pizza-de-jamon-queso-y-tocino.jpg?width=1200&enable=upscale",
-        descripción: "Rica pizza de queso",
+        descripcion: "Rica pizza de queso",
         handle: "@queso",
         ingredientes: "queso",
         precio: "200",
@@ -50,7 +50,7 @@ const pizzas = [
     {
         nombre: "champiñones",
         imagen: "https://cdn7.kiwilimon.com/recetaimagen/38841/50030.jpg",
-        descripción: "Rica pizza de champiñones",
+        descripcion: "Rica pizza de champiñones",
         handle: "@champiñones",
         ingredientes: "champiñones",
         precio: "200",
@@ -58,7 +58,7 @@ const pizzas = [
     {
         nombre: "salchicha",
         imagen: "https://comecarne.org/wp-content/uploads/2020/09/pizza_salchicha_xxl.jpg",
-        descripción: "Rica pizza de salchicha",
+        descripcion: "Rica pizza de salchicha",
         handle: "@salchicha",
         ingredientes: "salchicha",
         precio: "200",
@@ -70,7 +70,7 @@ module.exports = class Pizza {
     //Se utiliza para crear un nuevo objeto y definir las propiedades del modelo
     constructor(mi_pizza) {
         this.nombre = mi_pizza.nombre || "Hawaiana";
-        this.imagen = mi_pizza.imagen || "https://napolicartagena.com/wp-content/uploads/2022/01/La-Pizza-Hawaiana-de-Canada.jpg";
+        this.imagen = mi_pizza.imagen || "https://bulma.io/images/placeholders/1280x960.png";
         this.descripcion = mi_pizza.descripcion || "Rica pizza de jamón con piña";
         this.handle = mi_pizza.handle || "@pizza";
         this.ingredientes = mi_pizza.ingredientes || "jamón, piña";

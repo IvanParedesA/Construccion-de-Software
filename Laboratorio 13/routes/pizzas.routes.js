@@ -9,6 +9,8 @@ router.get('/lista', pizzasController.get_lista);
 
 router.get('/nuevo', pizzasController.get_nuevo);
 
+router.post('/nuevo', pizzasController.post_nuevo);
+
 router.get('/pedir', pizzasController.get_pedir);
 
 router.post('/pedir', pizzasController.post_pedir);

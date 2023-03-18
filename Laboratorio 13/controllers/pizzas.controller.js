@@ -2,10 +2,24 @@ const Pizza = require('../models/pizzas.model');
 
 exports.get_lista = (request, response, next) => {
     response.render('lista', { pizzas: Pizza.fetchAll() });
-}
+};
 
 exports.get_nuevo = (request, response, next) => {
     response.render('nuevo');
+};
+
+exports.post_nuevo = (request, response, next) => {
+    const pizza = new Pizza({
+        nombre: request.body.nombre,
+        descripcion: request.body.descripcion,
+        handle: request.body.handle,
+        ingredientes: request.body.ingredientes,
+        precio: request.body.precio,
+    });
+
+    pizza.save();
+
+    response.status(300).redirect('/pizzas/lista');
 }
 
 exports.get_pedir = (request, response, next) => {
