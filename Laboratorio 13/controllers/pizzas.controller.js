@@ -4,6 +4,10 @@ exports.get_lista = (request, response, next) => {
     response.render('lista', { pizzas: Pizza.fetchAll() });
 }
 
+exports.get_nuevo = (request, response, next) => {
+    response.render('nuevo');
+}
+
 exports.get_pedir = (request, response, next) => {
 
     let html = `

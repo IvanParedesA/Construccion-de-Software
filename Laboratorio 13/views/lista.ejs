@@ -1,5 +1,11 @@
 <%- include('includes/head.ejs') %>
 
+<h1 class="title">Menú</h1>
+
+<a href="/pizzas/nuevo" class="button is-link is-rounded">Registrar</a>
+
+<br><br>
+
 <% if (pizzas.length > 0) { %>
     <div class="columns is-multiline">
         <% for (let pizza of pizzas) { %>
@@ -38,5 +44,9 @@
 <% } else { %>
     <h1>No hay pizzas >:( </h1>
 <% } %>   
+
+<br><br>
+
+<a href="/pizzas/nuevo" class="button is-link is-rounded">Registrar</a>
 
 <%- include('includes/foot.ejs') %>
