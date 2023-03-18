@@ -7,51 +7,10 @@ const pizzasController = require('../controllers/pizzas.controller');
 
 router.get('/lista', pizzasController.get_lista);
 
-router.get('/pedir', (request, response, next) => {
+router.get('/pedir', pizzasController.get_pedir);
 
-    let html = `
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="utf-8">
-            </head>
-            <body>
-                <h1>Pizzería</h1>
-                <form action="/pizzas/pedir" method="POST">
-                    <fieldset>
-                        <legend>Escoge tu pizza:</legend>
-                        <div>
-                            <input type="checkbox" id="hawaiana" name="hawaiana">
-                            <label for="hawaiana">Hawaiana</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="peperoni" name="peperoni">
-                            <label for="peperoni">Peperoni</label>
-                        </div>
-                        <div>
-                            <input type="number" id="pizzas" name="pizzas" value="0" min="0">
-                            <label for="pizzas"> pizzas</label>
-                        </div>
-                    </fieldset>
-                    <br>
-                    <input type="submit" value="pedir">
-                </form>
-            </body>
-        </html>
-    `;
+router.post('/pedir', pizzasController.post_pedir);
 
-    response.send(html);
-});
-
-router.post('/pedir', (request, response, next) => {
-    console.log(request.body);
-
-    response.send("Pediste " + request.body.pizzas + " pizzas");
-});
-
-router.get('/pedido', (request, response, next) => {
-    response.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
-});
-
+router.get('/pedido', pizzasController.get_pedido);
 
 module.exports = router;
