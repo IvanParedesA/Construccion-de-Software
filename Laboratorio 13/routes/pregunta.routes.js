@@ -11,7 +11,7 @@ router.get('/respuesta', (request, response, next) => {
             <meta charset="UTF-8">
         </head>
         <body>
-            <h1>Preguntas</h1>
+            <h1>Preguntas Laboratorio 13</h1>
             <p>¿Qué beneficios encuentras en el estilo MVC?</p>
             <p>Principalmente que facilita una buena organización de todo el sistema de tu página web y además 
             porque de esta manera también se puede trabajar en equipo eficazmente dividiendo los roles.</p>
