@@ -19,6 +19,7 @@ exports.get_nuevo = (request, response, next) => {
 };
 
 exports.post_nuevo = (request, response, next) => {
+    
     const pizza = new Pizza({
         nombre: request.body.nombre,
         descripcion: request.body.descripcion,
@@ -28,6 +29,8 @@ exports.post_nuevo = (request, response, next) => {
     });
 
     pizza.save();
+
+    request.session.ultima_pizza = pizza.nombre
 
     response.status(300).redirect('/pizzas/lista');
 }
