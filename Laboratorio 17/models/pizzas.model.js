@@ -96,4 +96,11 @@ module.exports = class Pizza {
             `SELECT * FROM pizzas`
         );
     }
+
+    static fetchOne(id) {
+        return db.execute(
+            `SELECT * FROM pizzas WHERE id = ?`, [id]
+        );
+    }
+    
 }

@@ -11,20 +11,41 @@ exports.get_lista = (request, response, next) => {
     //Creación de una cookie
     response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');
     
-    Pizza.fetchAll()
-    .then(([rows, fieldData]) => {
-        console.log(rows);
-        //console.log(fieldData);
+    const id = request.params.id || 0;
 
-        response.render('lista', {
-            pizzas: rows,
-            ultima_pizza: request.session.ultima_pizza || '',
+    if(id != 0) {
+
+        Pizza.fetchOne(id)
+        .then(([rows, fieldData]) => {
+            console.log(rows);
+            //console.log(fieldData);
+
+            response.render('lista', {
+                pizzas: rows,
+                ultima_pizza: request.session.ultima_pizza || '',
+            });
+        })
+        .catch(error => {
+            console.log(error);
         });
-    })
-    .catch(error => {
-        console.log(error);
-    });
 
+    } else {
+
+        Pizza.fetchAll()
+        .then(([rows, fieldData]) => {
+            console.log(rows);
+            //console.log(fieldData);
+
+            response.render('lista', {
+                pizzas: rows,
+                ultima_pizza: request.session.ultima_pizza || '',
+            });
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
+    
 };
 
 exports.get_nuevo = (request, response, next) => {

@@ -5,6 +5,8 @@ const router = express.Router();
 
 const pizzasController = require('../controllers/pizzas.controller');
 
+router.get('/lista/:id', pizzasController.get_lista);
+
 router.get('/lista', pizzasController.get_lista);
 
 router.get('/nuevo', pizzasController.get_nuevo);
