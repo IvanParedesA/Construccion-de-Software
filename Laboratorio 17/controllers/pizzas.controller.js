@@ -13,7 +13,7 @@ exports.get_lista = (request, response, next) => {
     
     const id = request.params.id || 0;
 
-    Pizza.fetchAll(id)
+    Pizza.fetch(id)
     .then(([rows, fieldData]) => {
         console.log(rows);
         //console.log(fieldData);
