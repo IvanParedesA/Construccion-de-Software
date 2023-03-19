@@ -2,9 +2,14 @@ const Pizza = require('../models/pizzas.model');
 
 exports.get_lista = (request, response, next) => {
 
-    console.log(request.get('Cookie'));
+    const cookies = request.get('Cookie') || '';
     
-    response.setHeader('Set-Cookie', 'pizzas=hwaiana');
+    let consultas = cookies.split('=')[1] || 0;
+
+    consultas++;
+
+    //Creación de una cookie
+    response.setHeader('Set-Cookie', 'consultas=' + consultas);
 
     response.render('lista', { pizzas: Pizza.fetchAll() });
 };
