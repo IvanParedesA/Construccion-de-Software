@@ -10,7 +10,7 @@ exports.get_lista = (request, response, next) => {
 
     //Creación de una cookie
     response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');
-
+    //Recuperar variable de sesión
     response.render('lista', {
         pizzas: Pizza.fetchAll(),
         ultima_pizza: request.session.ultima_pizza || '',
