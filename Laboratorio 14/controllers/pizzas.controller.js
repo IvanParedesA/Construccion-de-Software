@@ -9,7 +9,7 @@ exports.get_lista = (request, response, next) => {
     consultas++;
 
     //Creación de una cookie
-    response.setHeader('Set-Cookie', 'consultas=' + consultas);
+    response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');
 
     response.render('lista', { pizzas: Pizza.fetchAll() });
 };
