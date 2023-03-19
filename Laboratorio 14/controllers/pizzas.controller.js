@@ -2,6 +2,8 @@ const Pizza = require('../models/pizzas.model');
 
 exports.get_lista = (request, response, next) => {
 
+    console.log(request.get('Cookie'));
+    
     response.setHeader('Set-cookie', 'pizzas=hwaiana');
 
     response.render('lista', { pizzas: Pizza.fetchAll() });
