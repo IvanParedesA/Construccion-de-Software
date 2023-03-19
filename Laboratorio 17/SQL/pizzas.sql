@@ -89,7 +89,7 @@ CREATE TABLE `pizzas` (
 --
 
 INSERT INTO `pizzas` (`id`, `nombre`, `imagen`, `descripcion`, `handle`, `precio`, `created_at`) VALUES
-(1, 'Hawaiana', 'https://napolicartagena.com/wp-content/uploads/2022/01/La-Pizza-Hawaiana-de-Canada.jpg', 'Rica pizza de jamón con piña', '@hawaiana', 150, '2023-03-18 20:12:02');
+(1, 'Hawaiana', 'https://napolicartagena.com/wp-content/uploads/2022/01/La-Pizza-Hawaiana-de-Canada.jpg', 'Rica pizza de jamón con piña', '@hawaiana', 200, '2023-03-18 20:12:02');
 
 --
 -- Índices para tablas volcadas
