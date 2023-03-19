@@ -4,7 +4,7 @@ exports.get_lista = (request, response, next) => {
 
     console.log(request.get('Cookie'));
     
-    response.setHeader('Set-cookie', 'pizzas=hwaiana');
+    response.setHeader('Set-Cookie', 'pizzas=hwaiana');
 
     response.render('lista', { pizzas: Pizza.fetchAll() });
 };
