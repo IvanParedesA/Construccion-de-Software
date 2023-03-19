@@ -91,16 +91,12 @@ module.exports = class Pizza {
     }
 
     //Método para devolver los objetos del almacenamiento persistente.
-    static fetchAll() {
-        return db.execute(
-            `SELECT * FROM pizzas`
-        );
+    static fetch(id){
+        letquery = `SELECT * FROM pizzas`;
+        if (id != 0) {
+            query += ' WHERE id = ?'
+            return db.execute(query, [id]);
+        }
+        return db.execute(query);
     }
-
-    static fetchOne(id) {
-        return db.execute(
-            `SELECT * FROM pizzas WHERE id = ?`, [id]
-        );
-    }
-    
 }

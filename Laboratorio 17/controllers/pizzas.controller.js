@@ -13,39 +13,20 @@ exports.get_lista = (request, response, next) => {
     
     const id = request.params.id || 0;
 
-    if(id != 0) {
+    Pizza.fetchAll(id)
+    .then(([rows, fieldData]) => {
+        console.log(rows);
+        //console.log(fieldData);
 
-        Pizza.fetchOne(id)
-        .then(([rows, fieldData]) => {
-            console.log(rows);
-            //console.log(fieldData);
-
-            response.render('lista', {
-                pizzas: rows,
-                ultima_pizza: request.session.ultima_pizza || '',
-            });
-        })
-        .catch(error => {
-            console.log(error);
+        response.render('lista', {
+            pizzas: rows,
+            ultima_pizza: request.session.ultima_pizza || '',
         });
+    })
+    .catch(error => {
+        console.log(error);
+    });
 
-    } else {
-
-        Pizza.fetchAll()
-        .then(([rows, fieldData]) => {
-            console.log(rows);
-            //console.log(fieldData);
-
-            response.render('lista', {
-                pizzas: rows,
-                ultima_pizza: request.session.ultima_pizza || '',
-            });
-        })
-        .catch(error => {
-            console.log(error);
-        });
-    }
-    
 };
 
 exports.get_nuevo = (request, response, next) => {
