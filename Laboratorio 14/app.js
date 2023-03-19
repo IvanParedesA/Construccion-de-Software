@@ -37,6 +37,10 @@ app.use('/home', (request, response, next) => {
     */
 });
 
+const rutasUsers = require('./routes/users.routes');
+
+app.use('/users', rutasUsers);
+
 app.use('/saludo', (request, response, next) => {
 
     response.send('¡Hola Mundo!');
