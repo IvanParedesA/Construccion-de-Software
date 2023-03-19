@@ -11,7 +11,10 @@ exports.get_lista = (request, response, next) => {
     //Creación de una cookie
     response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');
 
-    response.render('lista', { pizzas: Pizza.fetchAll() });
+    response.render('lista', {
+        pizzas: Pizza.fetchAll(),
+        ultima_pizza: request.session.ultima_pizza || '',
+    });
 };
 
 exports.get_nuevo = (request, response, next) => {
