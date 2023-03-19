@@ -1,3 +1,5 @@
+const db = require('../util/database');
+
 const pizzas = [
     {
         nombre: "hawaiana",
@@ -84,6 +86,6 @@ module.exports = class Pizza {
 
     //Método para devolver los objetos del almacenamiento persistente.
     static fetchAll() {
-        return pizzas;
+        return db.execute('SELECT * FROM pizzas');
     }
 }
