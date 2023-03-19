@@ -1,5 +1,6 @@
 const db = require('../util/database');
 
+/*
 const pizzas = [
     {
         nombre: "hawaiana",
@@ -66,6 +67,7 @@ const pizzas = [
         precio: "200",
     },
 ];
+*/
 
 module.exports = class Pizza {
     //Constructor de la clase:
@@ -81,11 +83,17 @@ module.exports = class Pizza {
 
     //Método para guardar de manera persistente el nuevo objeto.
     save() {
-        pizzas.push(this);
+        return db.execute(
+            `INSERT INTO pizzas(nombre, imagen, descripcion, handle, precio)
+            VALUES(?, ?, ?, ?, ?)`,
+            [this.nombre, this.imagen, this.descripcion, this.handle, this.precio]
+        );
     }
 
     //Método para devolver los objetos del almacenamiento persistente.
     static fetchAll() {
-        return db.execute('SELECT * FROM pizzas');
+        return db.execute(
+            `SELECT * FROM pizzas`
+        );
     }
 }

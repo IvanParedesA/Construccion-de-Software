@@ -24,7 +24,7 @@ exports.get_lista = (request, response, next) => {
     .catch(error => {
         console.log(error);
     });
-    
+
 };
 
 exports.get_nuevo = (request, response, next) => {
@@ -41,12 +41,15 @@ exports.post_nuevo = (request, response, next) => {
         precio: request.body.precio,
     });
 
-    pizza.save();
+    pizza.save()
+    .then(([rows, fieldData]) => {
+        request.session.ultima_pizza = pizza.nombre;
 
-    request.session.ultima_pizza = pizza.nombre
+        response.status(300).redirect('/pizzas/lista');
+    })
+    .catch(error => console.log(error));
 
-    response.status(300).redirect('/pizzas/lista');
-}
+};
 
 exports.get_pedir = (request, response, next) => {
 
