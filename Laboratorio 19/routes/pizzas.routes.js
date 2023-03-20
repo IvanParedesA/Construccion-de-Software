@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const hasCreate = require('../util/has-create');
 
 const router = express.Router();
 
@@ -9,9 +10,9 @@ router.get('/lista/:id', pizzasController.get_lista);
 
 router.get('/lista', pizzasController.get_lista);
 
-router.get('/nuevo', pizzasController.get_nuevo);
+router.get('/nuevo', hasCreate, pizzasController.get_nuevo);
 
-router.post('/nuevo', pizzasController.post_nuevo);
+router.post('/nuevo', hasCreate, pizzasController.post_nuevo);
 
 router.get('/pedir', pizzasController.get_pedir);
 
