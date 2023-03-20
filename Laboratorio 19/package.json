@@ -1,0 +1,38 @@
+{
+  "name": "construccion-de-software",
+  "version": "1.0.0",
+  "description": "Laboratorios del curso TC2005B",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanParedesA/Construccion-de-Software.git"
+  },
+  "keywords": [
+    "node",
+    "tec",
+    "pizza",
+    "comida"
+  ],
+  "author": "Iván Paredes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IvanParedesA/Construccion-de-Software/issues"
+  },
+  "homepage": "https://github.com/IvanParedesA/Construccion-de-Software#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.2.0"
+  }
+}
