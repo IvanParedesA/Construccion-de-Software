@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const session = require('express-session');
+const isAuth = require('./util/is-auth');
 
 const app = express();
 
@@ -50,7 +51,7 @@ const pizzasRutas = require('./routes/pizzas.routes');
 const contactoRutas = require('./routes/contacto.routes');
 const preguntaRutas = require('./routes/pregunta.routes');
 
-app.use('/pizzas', pizzasRutas);
+app.use('/pizzas', isAuth, pizzasRutas);
 app.use('/contacto',contactoRutas);
 app.use('/pregunta', preguntaRutas);
 
