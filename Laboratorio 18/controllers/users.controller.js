@@ -14,6 +14,19 @@ exports.get_login = (request, response, next) => {
     });
 };
 
+exports.post_login = (request, response, next) => {
+    User.fetchOne(request.body.username)
+    .then(([rows, fieldData]) => {
+        if (rows.length > 0) {
+
+        } else {
+            request.session.mensaje = 'Nombre de usuario y/o contraseña no coinciden';
+            response.redirect('/users/login');
+        }
+    })
+    .catch((error) => {console.log(error)});
+}
+
 exports.get_signup = (request, response, next) => {
     response.render('signup');
 };
