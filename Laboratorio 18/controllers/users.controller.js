@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs/dist/bcrypt');
 const User = require('../models/users.model');
 
 exports.get_login = (request, response, next) => {
@@ -18,7 +19,18 @@ exports.post_login = (request, response, next) => {
     User.fetchOne(request.body.username)
     .then(([rows, fieldData]) => {
         if (rows.length > 0) {
-
+            bcrypt.compare(request.body.password, rows[0].password)
+            .then((doMatch) => {
+                if (doMatch) {
+                    request.session.isLoggedIn = true;
+                    request.session.nombre = rows[0].nombre;
+                    response.redirect('/pizzas/lista');
+                } else {
+                    request.session.mensaje = 'Nombre de usuario y/o contraseña no coinciden';
+                    response.redirect('/users/login');
+                }
+            })
+            .catch((error) => {console.log(error)});
         } else {
             request.session.mensaje = 'Nombre de usuario y/o contraseña no coinciden';
             response.redirect('/users/login');
