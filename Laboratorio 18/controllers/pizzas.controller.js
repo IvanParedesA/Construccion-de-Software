@@ -21,6 +21,8 @@ exports.get_lista = (request, response, next) => {
         response.render('lista', {
             pizzas: rows,
             ultima_pizza: request.session.ultima_pizza || '',
+            isLoggedIn: request.session.isLoggedIn || false,
+            nombre: request.session.nombre || '',
         });
     })
     .catch(error => {
@@ -30,7 +32,10 @@ exports.get_lista = (request, response, next) => {
 };
 
 exports.get_nuevo = (request, response, next) => {
-    response.render('nuevo');
+    response.render('nuevo', {
+        isLoggedIn: request.session.isLoggedIn || false,
+        nombre: request.session.nombre || '',
+    });
 };
 
 exports.post_nuevo = (request, response, next) => {

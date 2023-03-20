@@ -12,6 +12,8 @@ exports.get_login = (request, response, next) => {
 
     response.render('login', {
         mensaje: mensaje,
+        isLoggedIn: request.session.isLoggedIn || false,
+        nombre: request.session.nombre || '',
     });
 };
 
@@ -40,7 +42,10 @@ exports.post_login = (request, response, next) => {
 }
 
 exports.get_signup = (request, response, next) => {
-    response.render('signup');
+    response.render('signup', {
+        isLoggedIn: request.session.isLoggedIn || false,
+        nombre: request.session.nombre || '',
+    });
 };
 
 exports.post_signup = (request, response, next) => {
