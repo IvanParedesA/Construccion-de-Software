@@ -35,6 +35,7 @@ exports.get_nuevo = (request, response, next) => {
     response.render('nuevo', {
         isLoggedIn: request.session.isLoggedIn || false,
         nombre: request.session.nombre || '',
+        csrfToken: request.csrfToken(),
     });
 };
 

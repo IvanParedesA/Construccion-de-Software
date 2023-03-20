@@ -14,6 +14,7 @@ exports.get_login = (request, response, next) => {
         mensaje: mensaje,
         isLoggedIn: request.session.isLoggedIn || false,
         nombre: request.session.nombre || '',
+        csrfToken: request.csrfToken(),
     });
 };
 
@@ -45,6 +46,7 @@ exports.get_signup = (request, response, next) => {
     response.render('signup', {
         isLoggedIn: request.session.isLoggedIn || false,
         nombre: request.session.nombre || '',
+        csrfToken: request.csrfToken(),
     });
 };
 
