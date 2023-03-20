@@ -2,7 +2,9 @@
 
 <h1 class="title">Menú</h1>
 
-<a href="/pizzas/nuevo" class="button is-link is-rounded">Registrar</a>
+<% if(privilegios.indexOf('crear_pizzas') >= 0) { %>
+    <a href="/pizzas/nuevo" class="button is-link is-rounded">Registrar</a>
+}
 
 <br><br>
 
@@ -47,6 +49,14 @@
 
 <br><br>
 
-<a href="/pizzas/nuevo" class="button is-link is-rounded">Registrar</a>
+<% if (ultima_pizza != '') { %>
+    <div class="notification is-link is-light">
+        La última pizza registrada fue: <%= ultima_pizza %>
+    </div>
+<% } %>
+
+<% if(privilegios.indexOf('crear_pizzas') >= 0) { %>
+    <a href="/pizzas/nuevo" class="button is-link is-rounded">Registrar</a>
+}
 
 <%- include('includes/foot.ejs') %>
