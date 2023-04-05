@@ -1,0 +1,62 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Menú</h1>
+
+<% if(privilegios.indexOf('crear_pizzas') >= 0) { %>
+    <a href="/pizzas/nuevo" class="button is-link is-rounded">Registrar</a>
+}
+
+<br><br>
+
+<% if (pizzas.length > 0) { %>
+    <div class="columns is-multiline">
+        <% for (let pizza of pizzas) { %>
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="<%= pizza.imagen %>" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="<%= pizza.imagen %>" alt="Placeholder image">
+                            </figure>
+                            </div>
+                            <div class="media-content">
+                            <p class="title is-4"><%= pizza.nombre %></p>
+                            <p class="subtitle is-6"><%= pizza.handle %> $<%= pizza.precio %> </p>
+                            </div>
+                        </div>
+                    
+                        <div class="content">
+                            <%= pizza.descripcion %>
+                            <br>
+                            Ingredientes:
+                            <br>
+                            <%= pizza.ingredientes %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+<% } else { %>
+    <h1>No hay pizzas >:( </h1>
+<% } %>   
+
+<br><br>
+
+<% if (ultima_pizza != '') { %>
+    <div class="notification is-link is-light">
+        La última pizza registrada fue: <%= ultima_pizza %>
+    </div>
+<% } %>
+
+<% if(privilegios.indexOf('crear_pizzas') >= 0) { %>
+    <a href="/pizzas/nuevo" class="button is-link is-rounded">Registrar</a>
+}
+
+<%- include('includes/foot.ejs') %>
