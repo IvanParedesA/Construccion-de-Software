@@ -4,7 +4,7 @@
 
 <br><br>
 
-<form action="/pizzas/nuevo" method="POST">
+<form action="/pizzas/nuevo" method="POST" enctype="multipart/form-data">
 
     <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
 
@@ -22,6 +22,9 @@
     
     <label for="precio">Precio:</label>
     <input name="precio" id="precio" class="input is-rounded" type="number" value="200">
+
+    <label for="imagen">Imagen:</label>
+    <input name="imagen" id="imagen" class="input is-rounded" type="file">
 
     <br><br>
 
