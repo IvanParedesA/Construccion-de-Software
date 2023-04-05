@@ -1,0 +1,35 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Registrar pizza</h1>
+
+<br><br>
+
+<form action="/pizzas/nuevo" method="POST" enctype="multipart/form-data">
+
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+
+    <label for="nombre">Nombre:</label>
+    <input required name="nombre" id="nombre" class="input is-rounded" type="text" placeholder="Hawaiana">
+
+    <label for="descripcion">Descripcion:</label>
+    <input name="descripcion" id="descripcion" class="input is-rounded" type="text" placeholder="Rica pizza de jamón con piña">
+
+    <label for="handle">Handle:</label>
+    <input name="handle" id="handle" class="input is rounded" type="text" placeholder="@pizza">
+
+    <label for="ingredientes">Ingredientes:</label>
+    <input name="ingredientes" id="ingredientes" class="input is-rounded" type="text" placeholder="jamón, piña">
+    
+    <label for="precio">Precio:</label>
+    <input name="precio" id="precio" class="input is-rounded" type="number" value="200">
+
+    <label for="imagen">Imagen:</label>
+    <input name="imagen" id="imagen" class="input is-rounded" type="file">
+
+    <br><br>
+
+    <input class="button is-info is-rounded" type="submit" value="Registrar">
+
+</form>
+
+<%- include('includes/foot.ejs') %>
