@@ -74,7 +74,7 @@ module.exports = class Pizza {
     //Se utiliza para crear un nuevo objeto y definir las propiedades del modelo
     constructor(mi_pizza) {
         this.nombre = mi_pizza.nombre || "Hawaiana";
-        this.imagen = mi_pizza.imagen || "https://bulma.io/images/placeholders/1280x960.png";
+        this.imagen = mi_pizza.imagen || "pizzas.png";
         this.descripcion = mi_pizza.descripcion || "Rica pizza de jamón con piña";
         this.handle = mi_pizza.handle || "@pizza";
         this.ingredientes = mi_pizza.ingredientes || "jamón, piña";
