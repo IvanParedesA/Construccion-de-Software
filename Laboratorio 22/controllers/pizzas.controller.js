@@ -41,6 +41,8 @@ exports.get_nuevo = (request, response, next) => {
 };
 
 exports.post_nuevo = (request, response, next) => {
+
+    console.log(request.file);
     
     const pizza = new Pizza({
         nombre: request.body.nombre,
@@ -48,6 +50,7 @@ exports.post_nuevo = (request, response, next) => {
         handle: request.body.handle,
         ingredientes: request.body.ingredientes,
         precio: request.body.precio,
+        imagen: request.file.filename,
     });
 
     pizza.save()
