@@ -1,5 +1,16 @@
 const Pizza = require('../models/pizzas.model');
 
+exports.get_buscar = (request, response, next) => {
+
+    Pizza.find(request.params.valor_busqueda).then(([rows, fieldData]) => {
+        response.status(200).json({pizzas: rows});
+    })
+    .catch((error) => {
+        console.log(error);
+        response.status(500).json({message: "Internal Server Error"});
+    });
+}
+
 exports.get_lista = (request, response, next) => {
 
     const cookies = request.get('Cookie') || '';
