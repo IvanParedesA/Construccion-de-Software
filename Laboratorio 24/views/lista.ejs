@@ -4,10 +4,14 @@
 
 <% if(privilegios.indexOf('crear_pizzas') >= 0) { %>
     <a href="/pizzas/nuevo" class="button is-link is-rounded">Registrar</a>
-}
+<% } %>
 
 <br><br>
+<label for="buscar">Buscar:</label>
+<input name="buscar" id="buscar" class="input is-info" type="text">
+<br><br>
 
+<div id="resultados">
 <% if (pizzas.length > 0) { %>
     <div class="columns is-multiline">
         <% for (let pizza of pizzas) { %>
@@ -46,6 +50,7 @@
 <% } else { %>
     <h1>No hay pizzas >:( </h1>
 <% } %>   
+</div>
 
 <br><br>
 
@@ -57,6 +62,71 @@
 
 <% if(privilegios.indexOf('crear_pizzas') >= 0) { %>
     <a href="/pizzas/nuevo" class="button is-link is-rounded">Registrar</a>
-}
+<% } %>
+
+<sript>
+    document.getElementById("buscar").onkeyup = () => {
+
+        const valor_busqueda = document.getElementById("buscar").value;
+        //función que manda la petición asíncrona
+        fetch('/pizzas/buscar/' + valor_busqueda, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }).then(result => {
+            return result.json(); //Regresa otra promesa
+        }).then(data => {
+            //Modificamos el DOM de nuestra página de acuerdo a los datos de la segunda promesa
+            console.log(data);
+
+            let resultados = "";
+
+            if (data.pizzas.length > 0) {
+                resultados += `<div class="columns is-multiline">`;
+                    for (let pizza of data.pizzas) {
+                        resultados += `<div class="column is-3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="/uploads/${pizza.imagen}" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-48x48">
+                                                <img src="/uploads/${pizza.imagen}" alt="Placeholder image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="title is-4">${pizza.nombre}</p>
+                                            <p class="subtitle is-6">${pizza.handle} $${pizza.precio} </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        ${pizza.descripcion}
+                                        <br>
+                                        Ingredientes:
+                                        <br>
+                                        ${pizza.ingredientes}
+                                    </div>
+                                </div>
+                            </div>
+                        </div> `;
+                    }
+                resultados += `</div>`;
+            } else {
+                resultados += `<h1>No hay pizzas >:( </h1>`;
+            }
+
+            document.getElementById("resultados").innerHTML = resultados;
+
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+</sript>
 
 <%- include('includes/foot.ejs') %>
